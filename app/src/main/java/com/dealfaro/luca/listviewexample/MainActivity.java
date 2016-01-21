@@ -82,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, s, duration);
                     toast.show();
+                    // Let's remove the list item.
+                    int i = Integer.parseInt(s);
+                    aList.remove(i);
+                    aa.notifyDataSetChanged();
                 }
             });
 
