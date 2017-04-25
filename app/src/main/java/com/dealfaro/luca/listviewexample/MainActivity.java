@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
             super(_context, _resource, items);
             resource = _resource;
             context = _context;
-            this.context = _context;
         }
 
         @Override
@@ -58,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
             // Inflate a new view if necessary.
             if (convertView == null) {
                 newView = new LinearLayout(getContext());
-                String inflater = Context.LAYOUT_INFLATER_SERVICE;
-                LayoutInflater vi = (LayoutInflater) getContext().getSystemService(inflater);
+                LayoutInflater vi = (LayoutInflater)
+                        getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 vi.inflate(resource,  newView, true);
             } else {
                 newView = (LinearLayout) convertView;
@@ -130,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         // we cannot do here aList = new ArrayList<ListElement>() ,
         // otherwise we create another ArrayList which would not be
         // associated with aa.
+        // aList = new ArrayList<ListElement>(); --- NO
         aList.clear();
         for (int i = 0; i < n; i++) {
             aList.add(new ListElement(
