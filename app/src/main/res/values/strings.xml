@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">ListViewExample</string>
+    <string name="app_name">MyListView</string>
     <string name="refresh_msg">Refresh</string>
 </resources>
